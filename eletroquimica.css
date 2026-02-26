@@ -1,0 +1,186 @@
+body {
+    background-color: #86efac;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Outfit", sans-serif;
+    background-image: url("https://i.postimg.cc/SRB9jJKr/Design-sem-nome-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header {
+    background-color: #fb923c;
+    margin: 0 auto;
+    padding: 5px;
+    color: white;
+}
+
+#prim {
+    border: 2px solid rgb(199, 130, 3);
+    border-radius: 50px;
+    margin-top: 30px;
+    height: 300px;
+}
+
+.section1 {
+    background-color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+    max-height: max-content;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#one {
+    color: white;
+    background-color: #1f2937;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    font-size: 20px;
+}
+
+#two {
+    color: white;
+    background-color: #1f2937;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    font-size: 20px;
+}
+
+#sec {
+    width: 1000px;
+}
+
+.section2 {
+    background-color: #334155;
+    max-height: max-content;
+    color: white;
+    padding: 20px;
+}
+
+
+.section2 p {
+    color: white;
+    background-color: #1f2937;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    font-size: 20px;
+}
+
+.section2 ul{
+    font-size: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+ol {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background-color: #1f2937;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.section3 {
+    background-color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+    max-height: max-content;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.layout-flex {
+  display: flex;         /* ATIVA O MODO LADO A LADO */
+  align-items: center;   /* Alinha verticalmente no centro */
+  gap: 20px;             /* Cria um espaço entre texto e imagem */
+  margin-bottom: 50px;   /* Adiciona um espaço antes do conteúdo de baixo */
+  flex-wrap: wrap;       /* Permite que a imagem vá para baixo em telas pequenas */
+}
+
+/* Define que os blocos de texto e imagem devem dividir o espaço */
+.bloco-texto, .bloco-imagem {
+  flex: 1; 
+  min-width: 200px; 
+}
+
+.bloco-imagem img {
+  width: 400px;
+  height: auto;
+  border-radius: 15px; 
+  
+}
+
+/* Sugestão: centralizar os títulos da sua seção */
+.section3 h2 {
+    text-align: center; /* Garante que o texto dentro do bloco fique à esquerda */
+
+}
+
+#textinho {
+    color: white;
+    background-color: #1f2937;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: auto;
+    max-width: 600px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#começo {
+    text-align: center;
+}
+
+#pilhas {
+    width: 700px;
+    border: 2px solid rgb(199, 130, 3);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto 40px auto; 
+    border: 1px solid rgb(134, 66, 66);
+    border-collapse: collapse; 
+    margin-top: 30px;
+}
+
+td, th {
+    border: 1px solid rgb(87, 37, 37);
+    padding: 15px; 
+    background-color: white;
+    text-align: center;
+}
+
+th {
+    background-color: #949494;
+    color: rgb(247, 247, 247);
+}
+
+footer {
+    background-color: #334155;
+    color: aliceblue;
+    padding: 10px;
+}
