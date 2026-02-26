@@ -1,7 +1,7 @@
 body {
     background-color: #86efac;
     text-align: center;
-    margin: 0 auto;
+    margin: 0; /* Removido auto aqui para evitar conflitos */
     font-family: "Outfit", sans-serif;
     background-image: url("https://i.postimg.cc/SRB9jJKr/Design-sem-nome-2.png");
     background-repeat: no-repeat;
@@ -21,52 +21,43 @@ header {
     border: 2px solid rgb(199, 130, 3);
     border-radius: 50px;
     margin-top: 30px;
-    height: 300px;
+    height: auto; /* Alterado para auto para não achatar no mobile */
+    max-height: 300px;
+    max-width: 90%; /* Garante que não saia da tela */
 }
 
 .section1 {
     background-color: white;
-    margin-left: 200px;
-    margin-right: 200px;
-    max-height: max-content;
+    margin: 0 auto; /* Centraliza */
+    max-width: 1000px; /* Define um limite em vez de margens fixas */
+    width: 90%; /* Ocupa quase tudo no mobile */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding-bottom: 20px;
 }
 
-#one {
+#one, #two {
     color: white;
     background-color: #1f2937;
     border-radius: 20px;
     text-align: center;
     padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto; /* Centraliza com espaçamento */
     max-width: 700px;
-    font-size: 20px;
-}
-
-#two {
-    color: white;
-    background-color: #1f2937;
-    border-radius: 20px;
-    text-align: center;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px;
+    width: 90%; 
     font-size: 20px;
 }
 
 #sec {
-    width: 1000px;
+    width: 100%; /* Ocupa a largura do container pai */
+    max-width: 1000px; 
+    height: auto;
 }
 
 .section2 {
     background-color: #334155;
-    max-height: max-content;
-    color: white;
     padding: 20px;
+    color: white;
 }
-
 
 .section2 p {
     color: white;
@@ -74,24 +65,24 @@ header {
     border-radius: 20px;
     text-align: center;
     padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
     max-width: 700px;
+    width: 90%;
     font-size: 20px;
 }
 
-.section2 ul{
+.section2 ul {
     font-size: 20px;
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+    width: 90%;
+    margin: 20px auto;
+    text-align: left; /* Melhor leitura em listas */
 }
 
 ol {
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 85%;
+    margin: 0 auto;
     text-align: left;
     background-color: #1f2937;
     padding: 30px;
@@ -101,38 +92,32 @@ ol {
 
 .section3 {
     background-color: white;
-    margin-left: 200px;
-    margin-right: 200px;
-    max-height: max-content;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 90%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 10px;
 }
 
 .layout-flex {
-  display: flex;         /* ATIVA O MODO LADO A LADO */
-  align-items: center;   /* Alinha verticalmente no centro */
-  gap: 20px;             /* Cria um espaço entre texto e imagem */
-  margin-bottom: 50px;   /* Adiciona um espaço antes do conteúdo de baixo */
-  flex-wrap: wrap;       /* Permite que a imagem vá para baixo em telas pequenas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap; /* Já estava correto! */
 }
 
-/* Define que os blocos de texto e imagem devem dividir o espaço */
 .bloco-texto, .bloco-imagem {
-  flex: 1; 
-  min-width: 200px; 
+    flex: 1;
+    min-width: 280px; /* Ajustado para caber em celulares pequenos */
 }
 
 .bloco-imagem img {
-  width: 400px;
-  height: auto;
-  border-radius: 15px; 
-  
-}
-
-/* Sugestão: centralizar os títulos da sua seção */
-.section3 h2 {
-    text-align: center; /* Garante que o texto dentro do bloco fique à esquerda */
-
+    max-width: 100%; /* Ajusta à largura do bloco */
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
 }
 
 #textinho {
@@ -141,46 +126,57 @@ ol {
     border-radius: 20px;
     text-align: center;
     padding: 10px;
-    margin-left: 20px;
-    margin-right: auto;
+    margin: 0 auto;
     max-width: 600px;
+    width: 90%;
     font-size: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-#começo {
-    text-align: center;
-}
-
 #pilhas {
+    max-width: 90%;
     width: 700px;
+    height: auto;
     border: 2px solid rgb(199, 130, 3);
     border-radius: 10px;
 }
 
+/* Tabela Responsiva */
 table {
-    width: 100%;
-    max-width: 800px; 
-    margin: 0 auto 40px auto; 
+    width: 95%;
+    max-width: 800px;
+    margin: 30px auto 40px auto;
     border: 1px solid rgb(134, 66, 66);
-    border-collapse: collapse; 
-    margin-top: 30px;
+    border-collapse: collapse;
 }
 
 td, th {
     border: 1px solid rgb(87, 37, 37);
-    padding: 15px; 
+    padding: 10px;
     background-color: white;
     text-align: center;
 }
 
-th {
-    background-color: #949494;
-    color: rgb(247, 247, 247);
+/* Ajustes Específicos para Telas Pequenas (Mobile) */
+@media (max-width: 768px) {
+    ol, .section2 p, #one, #two, #textinho, .section2 ul {
+        font-size: 16px; /* Diminui a fonte levemente no celular */
+    }
+    
+    header h1 {
+        font-size: 22px;
+    }
+
+    /* Permite que a tabela role para o lado se for muito grande */
+    table {
+        display: block;
+        overflow-x: auto;
+    }
 }
 
 footer {
     background-color: #334155;
     color: aliceblue;
-    padding: 10px;
+    padding: 20px;
+    margin-top: 20px;
 }
