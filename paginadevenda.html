@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfólio — Meus Sites</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f7f7f7;color:#222}
+    .header{padding:28px 16px;text-align:center;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.05)}
+    .header h1{margin:0;font-size:56px}
+    .container{max-width:1300px;margin:48px auto;padding:0 16px;display:flex;justify-content:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;width:100%;align-items:start;justify-items:center}
+    .card{background:#fff;border-radius:8px;overflow:hidden;display:block;text-decoration:none;color:inherit;box-shadow:0 2px 6px rgba(0,0,0,.06);transition:transform .15s,box-shadow .15s;max-width:460px;width:100%}
+    .card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+    .thumb{width:100%;height:220px;display:block;object-fit:cover;background:#ddd}
+    .card-body{padding:16px}
+    .title{font-weight:700;margin:0 0 8px;font-size:18px}
+    .desc{margin:0;font-size:14px;color:#555}
+    .footer-note{text-align:center;color:#666;font-size:13px;padding:16px 0}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.thumb{height:180px}}
+    @media (max-width:420px){.thumb{height:120px}.header h1{font-size:32px}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>PÁGINAS DE VENDA</h1>
+    <p>Projetos que eu produzi — clique para ver as páginas de vendas</p>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <a class="card" href="https://mentalize.impacta.website/elementor-203/" target="_blank" rel="noopener">
+        <img class="thumb" src="https://i.postimg.cc/9M5v6DrX/Whats-App-Image-2026-03-02-at-16-09-43.jpg" width="1200" height="800">
+        <div class="card-body"><p class="title">Projeto 1</p><p class="desc">Clique para abrir a página de venda</p></div>
+      </a>
+
+      <a class="card" href="https://mentalize.impacta.website/800-acervo-molde/" target="_blank" rel="noopener">
+        <img class="thumb" src="https://i.postimg.cc/4xjMcYvD/Whats-App-Image-2026-03-02-at-16-09-26.jpg" width="1200" height="800">
+        <div class="card-body"><p class="title">Projeto 2</p><p class="desc">Clique para abrir a página de venda</p></div>
+      </a>
+
+      <a class="card" href="https://mentalize.impacta.website/pg-modo-fenix/" target="_blank" rel="noopener">
+        <img class="thumb" src="https://i.postimg.cc/Vk2TtJBy/Whats-App-Image-2026-03-02-at-16-09-07.jpg" width="1200" height="800">
+        <div class="card-body"><p class="title">Projeto 3</p><p class="desc">Clique para abrir a página de venda</p></div>
+      </a>
+
+    </div>
+
+    
+  </main>
+</body>
+</html>
