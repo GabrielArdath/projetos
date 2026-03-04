@@ -1,0 +1,316 @@
+* {
+    margin:0;
+    padding:0;  
+    box-sizing: border-box ;
+    font-family: play;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primaria: #0055cc;
+    --light-blue: #c9e2fd;
+    --dark-blue: #011c46;
+    --text-dark: #1a1a1a;
+    --text-light: #666666;
+    --bg-white: #ffffff;
+    --border-light: #e0e0e0;
+    --vidro: rgba(119, 119, 119, 0.7);
+    --rgb: rgba(4, 19, 53, 0.9);
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-dark)
+
+}
+
+.navegacao {
+    position: fixed;
+    background: var(--rgb);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+    
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+
+}
+
+
+.menu-link {
+    color: var(--bg-white);
+    text-decoration: none;
+    font-size: 1.2rem;
+    /* margin-left: 2rem;  <- Dica: use o gap do pai em vez de margin aqui */
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative; /* ADICIONE ISSO: A linha azul vai "grudar" aqui */
+}
+
+.menu-link:hover {
+    color: var(--light-blue);
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--primaria));
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.foto-perfil {
+    width: 350px;
+    height: 350px;
+    box-shadow: #011c46 0px 4px 8px;
+    border-radius: 50%;
+    border: 1px solid var(--vidro);
+    object-fit: cover;
+    margin-bottom: 1rem;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.menu-nome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 10px;
+    font-size:20px;
+}
+
+.menu-nome h1 {
+    font-size: 2.5rem;
+    color: var(--primaria);
+}
+
+.menu-nome p {
+    font-size: 1.2rem;
+    color: var(--vidro);
+}
+
+#sobre {
+    padding: 6rem 2rem;
+    background-color: #000d22;
+
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--light-blue)
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+}
+
+.sobre-descricao {
+    color: var(--bg-white);
+    text-align: center;
+
+}
+
+#projetos {
+    padding: 6rem 2rem;
+
+}
+
+.projetos-titulo {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+
+}
+
+.projetos-imagem{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos-card {
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    box-shadow: #494949 0px 2px 2px;
+    overflow: hidden;
+}
+
+.projetos-card:hover {
+    box-shadow: 0 10px 20px var(--dark-blue);
+    transform: translateY(-10px) scale(1.03);
+    transition: all 0.3s ease;
+    cursor: grab;
+
+}
+
+.bloco-info {
+    padding: 1.05rem;
+}
+
+.projetos-nome {
+    line-height: 1.25rem;
+    color: var(--text-dark)
+
+
+}
+.projetos-descricao {
+    margin: 5px 0;
+}
+
+#contatos {
+    padding: 6rem 2rem;
+    background-color: #000d22;
+}
+
+.contato-titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--light-blue);
+}
+
+.formulario-contato {   
+    max-width: 600px;
+    margin: 0 auto;
+    background: #031f4bad;
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+
+}
+
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+
+
+}
+
+.campo-form {
+    width: 100%;
+    padding: 1rem;
+    background: #031f4bad;
+    border-radius: 8px;
+    color: var(--border-light);
+    border: 1px solid var(--vidro);
+}
+
+.campo-form::placeholder {
+    color: var(--border-light);
+}
+
+.campo-form:focus {
+    outline: none;
+    border-color: var(--primaria);
+    box-shadow: 0 0 5px var(--primaria);
+    transition: all 0.3s ease;
+}
+
+.rodape {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+}
+
+.botao-enviar {
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, var(--primaria), #0249ad);
+    color: var(--light-blue);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.botao-enviar:hover {
+    background: linear-gradient(45deg, #0249ad, var(--primaria));
+    box-shadow: 0 0 10px var(--primaria);
+    transform: translateY(-3px);
+}
+
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0.5;
+    pointer-events: none;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Fundo principal branco */
+    /* Gradientes sutis para dar o ar tecnológico */
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(122, 0, 255, 0.08) 0%, transparent 40%),
+        /* Uma grade bem clarinha para o estilo tech */
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+    height: 100vh;
+}
+
+
+@keyframes flutuar {
+    0%, 100% { 
+        transform: translateY(0);
+
+    }
+
+    50% { 
+        transform: translateY(-20px);
+    }
+}

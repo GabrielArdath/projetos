@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_original.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#início" class="menu-link">início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="início" class="cabecalho">
+        <div>
+            <div class="foto-container">
+                <img src="https://i.postimg.cc/HkYJDtrp/Whats-App-Image-2026-02-27-at-16-15-09.jpg" alt="Foto de perfil" class="foto-perfil">
+            </div>
+            <div class="menu-nome">
+                <h1>Gabriel Ardath</h1>
+            <p class="cargo">Desenvolvedor Web/Front End</p>
+            </div>
+        </div>
+    </main>
+
+    <section id="sobre" class="secao-sobre">
+        <h2 class="sobre-titulo">SOBRE MIM</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-descricao">Desenvolvedor com formação técnica pelo SESI/SENAI,
+             especializado na criação de interfaces para web
+              e análise de dados. Possuo sólida base em lógica
+               de programação, com ênfase na linguagem Python 
+               e foco em Front-end (HTML5 e CSS3 e JavaScript). Meu objetivo é transformar ideias em realidade,
+                criando sites e aplicativos que sejam visualmente atraentes e fáceis
+                 de usar. Estou sempre buscando aprender novas tecnologias e 
+                 aprimorar minhas habilidades para oferecer soluções inovadoras 
+                 aos meus clientes.</p>
+        </div>
+        
+    </section>
+    <section id="projetos" class="secao-projetos">
+        <h2 class="projetos-titulo">PROJETOS</h2>
+        <div class="projetos-caixa">
+            <a href="https://gabrielardath.github.io/projetos/paginadevenda.html" style="text-decoration: none; color: black;" class="projetos-card">
+                <img src="https://i.postimg.cc/ZR8Z51QD/image.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="bloco-info">
+                    <h3 class="projetos-nome">Páginas de venda</h3>
+                    <p class="projetos-descricao">Páginas de vendas produzidas para produtos digitais, com vendas consolidadas, de uma olhada</p>
+                </div>
+            </a>
+
+            <div class="projetos-card">
+                <img src="https://i.postimg.cc/cHy0ZsFT/image-(10).jpg" alt="Projeto 2" class="projetos-imagem">
+                <div class="bloco-info">
+                    <h3 class="projetos-nome">Páginas de venda</h3>
+                    <p class="projetos-descricao">Páginas de vendas produzidas para produtos digitais, com vendas consolidadas, de uma olhada</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="https://i.postimg.cc/C1TSYFc7/image-(11).jpg" alt="Projeto 3" class="projetos-imagem">
+                <div class="bloco-info">
+                    <h3 class="projetos-nome">Aplicativos web</h3>
+                    <p class="projetos-descricao">Alguns aplicativos web desenvolvidos com HTML, CSS e JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="secao-contatos">
+        <h2 class="contato-titulo">Entre em contato :)</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="digite sua mensagem" id="mensagem" rows="6"></textarea>
+            </div>
+            <button type="submit" class="botao-enviar">Enviar Whatsapp</button>
+        </form>
+    </section>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Gabriel Ardath. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+        
+
+
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+        const telefone = '5565992274818'
+        const texto = `Olá Me chamo ${nome}, ${mensagem}`
+        const msgFormatada = encodeURIComponent(texto);
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+        window.open(url, '_blank');
+        }
+    </script>
+</body>
+
+</html>
